@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezekiel Abassa - Art Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <img id="modalImage" class="max-w-full max-h-full" src="" alt="Full view">
+    </div>
 
     <!-- Header -->
     <header class="bg-gray-800 text-white py-6">
@@ -34,15 +53,15 @@
             <h2 class="text-3xl font-semibold text-center mb-8">Featured Work</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Image 1 -->
-                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full h-auto object-cover" src="test.jpeg" alt="Charcoal portrait on big brown paper">
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer" onclick="openModal('test.jpeg')">
+                    <img class="w-full h-auto object-cover" src="test.jpeg" alt="Raw and expressive charcoal portrait on big brown paper">
                     <div class="p-4">
-                        <h3 class="text-2xl font-semibold">Charcoal Portrait</h3>
-                        <p class="text-gray-600 mt-2">A piece done with charcoal on big brown paper, capturing raw emotion and texture.</p>
+                        <h3 class="text-2xl font-semibold">Raw Expression</h3>
+                        <p class="text-gray-600 mt-2">This striking charcoal portrait captures an intense moment of raw emotion, where the subject's expression combines defiance and vulnerability. The rough, textured strokes on the brown paper background emphasize the contrast between light and shadow, bringing depth and intensity to the artwork. The subtle highlights on the teeth and eyes draw the viewer's focus, while the deep shadows add a dramatic and almost haunting feel to the piece, making it a powerful visual statement.</p>
                     </div>
                 </div>
                 <!-- Image 2 -->
-                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer" onclick="openModal('port1.jpeg')">
                     <img class="w-full h-auto object-cover" src="port1.jpeg" alt="Portrait of a contemplative subject">
                     <div class="p-4">
                         <h3 class="text-2xl font-semibold">Gentle Reflection</h3>
@@ -50,7 +69,7 @@
                     </div>
                 </div>
                 <!-- Image 3 -->
-                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer" onclick="openModal('port2.jpeg')">
                     <img class="w-full h-auto object-cover" src="port2.jpeg" alt="Profile portrait with glasses">
                     <div class="p-4">
                         <h3 class="text-2xl font-semibold">Focused Perspective</h3>
@@ -93,5 +112,17 @@
         </div>
     </footer>
 
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        document.getElementById('imageModal').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
 </body>
 </html>

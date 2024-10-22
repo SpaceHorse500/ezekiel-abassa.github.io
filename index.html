@@ -18,6 +18,16 @@
             justify-content: center;
             z-index: 50;
         }
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -52,23 +62,13 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-semibold text-center mb-8">Portfolio</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Blue Cool from A/C -->
-                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer" onclick="openModal('https://static.wixstatic.com/media/3442d6_2803dcff8bd845f6ad9d292c917e93f5~mv2.jpg/v1/fill/w_564,h_551,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3442d6_2803dcff8bd845f6ad9d292c917e93f5~mv2.jpg')">
-                    <img class="w-full h-auto object-cover" src="https://static.wixstatic.com/media/3442d6_2803dcff8bd845f6ad9d292c917e93f5~mv2.jpg/v1/fill/w_564,h_551,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3442d6_2803dcff8bd845f6ad9d292c917e93f5~mv2.jpg" alt="Blue Cool from A/C - Dry pastels on Velour paper">
-                    <div class="p-4">
-                        <h3 class="text-2xl font-semibold">Blue Cool from A/C</h3>
-                        <p class="text-gray-600 mt-2">Dry pastels on Velour paper, 18" x 19". I made this piece for all the jazz lovers and music lovers alike. Let your mind take you back to when you heard your favorite song, and let the sounds cool you down during this hot summer.</p>
-                        <p class="text-sm text-gray-500 mt-2">Tag: Pastel</p>
-                        <a href="https://www.gainesvillefinearts.org/product-page/blue-cool-from-a-c-ezekiel-abassa" class="text-blue-500 hover:underline" target="_blank">View on Gainesville Fine Arts Association</a>
-                    </div>
-                </div>
                 <!-- Image 1 -->
                 <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer" onclick="openModal('test.jpeg')">
                     <img class="w-full h-auto object-cover" src="test.jpeg" alt="Raw and expressive charcoal portrait on big brown paper">
                     <div class="p-4">
                         <h3 class="text-2xl font-semibold">Raw Expression</h3>
                         <p class="text-gray-600 mt-2">This striking charcoal portrait captures an intense moment of raw emotion, where the subject's expression combines defiance and vulnerability. The rough, textured strokes on the brown paper background emphasize the contrast between light and shadow, bringing depth and intensity to the artwork. The subtle highlights on the teeth and eyes draw the viewer's focus, while the deep shadows add a dramatic and almost haunting feel to the piece, making it a powerful visual statement.</p>
-                        <p class="text-sm text-gray-500 mt-2">Tag: Charcoal</p>
+                        <span class="tag">Charcoal</span>
                     </div>
                 </div>
                 <!-- Image 2 -->
@@ -77,7 +77,7 @@
                     <div class="p-4">
                         <h3 class="text-2xl font-semibold">Gentle Reflection</h3>
                         <p class="text-gray-600 mt-2">This piece captures a serene expression, emphasizing the subject's contemplative gaze and gentle smile. The use of charcoal on textured brown paper allows for a play of light and shadow, creating depth and warmth. The careful rendering of details, especially in the hair and hands, brings out the subject's personality and adds a sense of intimacy to the artwork.</p>
-                        <p class="text-sm text-gray-500 mt-2">Tag: Charcoal</p>
+                        <span class="tag">Charcoal</span>
                     </div>
                 </div>
                 <!-- Image 3 -->
@@ -86,7 +86,7 @@
                     <div class="p-4">
                         <h3 class="text-2xl font-semibold">Focused Perspective</h3>
                         <p class="text-gray-600 mt-2">A dynamic portrait that draws attention to the subject's expressive profile, accentuated by the contrast of glasses and the natural texture of the hair. The charcoal medium on brown paper highlights the intricate details of the facial features and the subtle tonal variations. This piece captures a moment of introspection, blending realism with a touch of artistic abstraction.</p>
-                        <p class="text-sm text-gray-500 mt-2">Tag: Charcoal</p>
+                        <span class="tag">Charcoal</span>
                     </div>
                 </div>
             </div>
